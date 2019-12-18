@@ -65,8 +65,13 @@ function isPrime (num) {
             }
 
             if (divNum > num/2 || divNum>100) {
-                console.log(num + ' is prime')
-                return true
+                if (Number.isInteger(Math.sqrt(num))) {
+                    console.log(num + ' is not prime')
+                    return false
+                } else {
+                    console.log(num + ' is prime')
+                    return true
+                }
             }
             divNum = divNum + 1;
         }
