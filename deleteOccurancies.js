@@ -18,24 +18,31 @@
 // [1,2,3,1,2,3].
 
 function deleteNth(arr, n) {
+    let arrForDelete = [];
     let counter = 1;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === arr[i-1]) {
+        if (arr[i] === arr[i+1]) {
             counter = counter + 1;
-            console.log('counter = ' + counter)
-
-            if (counter > n && arr[i+1] === undefined) {
-                arr.splice((i - counter), (counter - n + 1));
-                console.log('Deleted ' + counter + ' numbers with 1st function ' + arr[i])
-                counter = 1;
-            } else if (counter > n && arr[i] != arr[i+1]) {
-                arr.splice(((i - counter)+1), (counter - n));
-                console.log('Deleted ' + counter + ' numbers with 2nd function ' + arr[i])
-                counter = 1;
-            }
+            if (counter > n) arrForDelete.push(i);   
+        } else if (arr[i] != arr[i+1]) {
+            counter = 1;
         }
-        console.log(arr)
     }
+    console.log(arrForDelete)
+    for (j = arrForDelete.length; j > 0 ; j--) {
+        arr.splice(arrForDelete[j-1], 1)
+    }
+    console.log(arr)
+    return arr
 }
 
-deleteNth([20, 20 ,37, 37, 37, 37, 13, 13, 24, 24, 24, 11, 11, 11, 11], 2)
+
+//                     3                   8               12          (3)
+//                 2       4               8           11      13      (2)
+//        0       2   3   4       6       8   9       11  12  13      (1)
+// deleteNth([20, 20 ,37, 37, 37, 37, 13, 13, 24, 24, 24, 11, 11, 11, 11], 1) // expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
+
+//                     3                   8               12          (3)
+//                 2       4               8           11      13      (2)
+//         0       2   3   4       6       8   9       11  12  13
+deleteNth([20, 20 ,37, 37, 37, 37, 13, 13, 24, 24, 24, 11, 11, 11, 11], 1) // expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
