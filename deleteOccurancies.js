@@ -17,32 +17,45 @@
 // lead to 1 and 2 being in the result 3 times, and then take 3, which leads to 
 // [1,2,3,1,2,3].
 
+// function deleteNth(arr, n) {
+//     let arrForDelete = [];
+//     let counter = 1;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === arr[i+1]) {
+//             counter = counter + 1;
+//             if (counter > n) arrForDelete.push(i);   
+//         } else if (arr[i] != arr[i+1]) {
+//             counter = 1;
+//         }
+//     }
+//     console.log(arrForDelete)
+
+//     for (j = arrForDelete.length; j > 0 ; j--) {
+//         console.log('We delete ' + arrForDelete[j])
+//         arr.splice(arrForDelete[j-1], 1)
+//     }
+//     console.log(arr)
+//     return arr
+// }
+
+
 function deleteNth(arr, n) {
-    let arrForDelete = [];
-    let counter = 1;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === arr[i+1]) {
-            counter = counter + 1;
-            if (counter > n) arrForDelete.push(i);   
-        } else if (arr[i] != arr[i+1]) {
-            counter = 1;
+    counter = 0;
+    for (let num = 0; num < arr.length; num++) {
+        for (let sNum = 0; sNum < arr.length; sNum++) {
+            if (arr[num] === arr[sNum]) {
+                counter = counter + 1;
+                if (counter > n) {
+                    arr.splice(sNum, 1);
+                }
+            }
         }
+        counter = 0;
     }
-    console.log(arrForDelete)
-    for (j = arrForDelete.length; j > 0 ; j--) {
-        arr.splice(arrForDelete[j-1], 1)
-    }
+
     console.log(arr)
-    return arr
+    return(arr)
 }
 
-
-//                     3                   8               12          (3)
-//                 2       4               8           11      13      (2)
-//        0       2   3   4       6       8   9       11  12  13      (1)
-// deleteNth([20, 20 ,37, 37, 37, 37, 13, 13, 24, 24, 24, 11, 11, 11, 11], 1) // expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
-
-//                     3                   8               12          (3)
-//                 2       4               8           11      13      (2)
-//         0       2   3   4       6       8   9       11  12  13
-deleteNth([20, 20 ,37, 37, 37, 37, 13, 13, 24, 24, 24, 11, 11, 11, 11], 1) // expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
+deleteNth([20, 10, 20, 20, 13, 11, 11, 11, 11, 20], 2)
+// expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
