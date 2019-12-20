@@ -46,7 +46,11 @@ function deleteNth(arr, n) {
             if (arr[num] === arr[sNum]) {
                 counter = counter + 1;
                 if (counter > n) {
-                    arr.splice(sNum, 1);
+                    if (arr[sNum] === arr[sNum + 1]) {
+                        arr.splice(sNum, 2);
+                    } else {
+                        arr.splice(sNum, 1);
+                    }
                 }
             }
         }
@@ -57,5 +61,6 @@ function deleteNth(arr, n) {
     return(arr)
 }
 
-deleteNth([20, 10, 20, 20, 13, 11, 11, 11, 11, 20], 2)
+deleteNth([39, 33, 40, 39, 24, 27, 39, 27, 5, 33, 40, 39, 27, 5, 24, 15, 40, 47, 47, 27, 27, 33, 33, 5, 47, 47, 40, 47, 5, 27, 15, 40, 33, 5, 33, 47, 5, 33, 47, 33, 33, 27, 24, 39, 40, 39, 47, 33, 27], 1)
+// deleteNth([39, 33, 40, 24, 27, 5, 15, 47], 1)
 // expected output [20, 20 ,37, 37 13, 13, 24, 24, 11, 11]
