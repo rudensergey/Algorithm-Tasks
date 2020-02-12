@@ -26,3 +26,43 @@
 
 // if a result in seconds is ab.xy... it will be given truncated as ab.
 // if the given string is "" you will return ""
+
+function stat(string) {
+   if (!string) return "";
+
+   statArr = string
+      .split(",")
+      .map(a => a.split("|"))
+      .map(a => Number(a[0]) * 3600 + Number(a[1]) * 60 + Number(a[2]))
+      .sort((a, b) => {
+         if (a > b) return 1;
+         if (a == b) return 0;
+         if (a < b) return -1;
+      });
+
+   let range = compile(Math.max(...statArr) - Math.min(...statArr));
+   let average = compile(
+      Math.floor(statArr.reduce((a, b) => a + b) / statArr.length)
+   );
+   let median = compile(
+      statArr.length % 2 !== 0
+         ? statArr[(statArr.length - 1) / 2]
+         : Math.floor(
+              (statArr[statArr.length / 2 - 1] + statArr[statArr.length / 2]) /
+                 2
+           )
+   );
+
+   function compile(num) {
+      let result = [];
+      result.push(Math.floor(num / 3600));
+      result.push(Math.floor((num - result[0] * 3600) / 60));
+      result.push(Math.round(num - result[0] * 3600 - result[1] * 60));
+
+      return result
+         .map(a => (a.toString().length < 2 ? "0" + a : a.toString()))
+         .join("|");
+   }
+
+   return `Range: ${range} Average: ${average} Median: ${median}`;
+}
