@@ -1,101 +1,14 @@
-function isPrime(num) {
-   if (num <= 1) return false;
-   for (let a = 2; a <= Math.round(Math.sqrt(num)); a++) {
-      if (num % a === 0) return false;
-   }
-   return true;
-}
+const isPrime = (num) => {
+  if (num <= 1) false;
+  if (num <= 3) true;
 
-isPrime(386554921);
+  if (num % 2 == 0 || num % 3 == 0) return false;
 
-// function isPrime (num) {
-//     let primeArr = [];
+  for (let i = 5; i * i < num; i = i + 6) {
+    if (num % i == 0 || num % (i + 2) == 0) return false;
+  }
 
-//      if (num === -41) {
-//         console.log(num + ' is not prime')
-//         return false
+  return true;
+};
 
-//     } else if (num === -5) {
-//         console.log(num + ' is not prime')
-//         return false
-
-//     } else if (num >= 0) {
-//         for (let i = 1; i < num; i++) {
-//             let divNumber = num / i;
-
-//             if (Number.isInteger(divNumber)) {
-//                 primeArr.push(i);
-//             }
-//         }
-
-//         if (primeArr.length === 1) {
-//             console.log(num + ' is prime')
-//             return true
-//         } else {
-//             console.log(num + ' is not prime')
-//             return false
-//         }
-
-//     } else if (num < 0) {
-//         for (let i = -1; i > num; i--) {
-//             let divNumber = num / i;
-
-//             if (Number.isInteger(divNumber)) {
-//                 console.log(i)
-//                 primeArr.push(i);
-//             }
-//         }
-
-//         if (primeArr.length === 1) {
-//             console.log(num + ' is prime')
-//             return true
-//         } else {
-//             console.log(num + ' is not prime')
-//             return false
-//         }
-//     } else {
-//         console.log('There are some errors')
-//     }
-// // }
-
-// function isPrime (num) {
-//     let primeArr = [];
-//     let divNum = 1;
-
-//     if (num > 1) {
-//         while (divNum < num) {
-//             let result = num / divNum;
-//             console.log(divNum + ' checking')
-//             if (primeArr.length > 1) {
-//                 console.log(num + ' is not prime')
-//                 return false
-//             }
-//             if (Number.isInteger(result)) {
-//                 primeArr.push(divNum);
-//             }
-
-//             if (divNum > num/2 || divNum>100) {
-//                 if (Number.isInteger(Math.sqrt(num))) {
-//                     console.log(num + ' is not prime')
-//                     return false
-//                 } else {
-//                     console.log(num + ' is prime')
-//                     return true
-//                 }
-//             }
-//             divNum = divNum + 1;
-//         }
-//         console.log(num + ' is prime')
-//         return true
-
-//     } else if (num < 0) {
-//         console.log(num + ' is not prime')
-//         return false
-
-//     } else {
-//         console.log(num + ' is not prime')
-//         return false
-//     }
-// }
-
-// isPrime(386554921)
+isPrime(13);
