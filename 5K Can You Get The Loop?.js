@@ -1,4 +1,6 @@
-function loop_size(node) {
+//www.codewars.com/kata/52a89c2ea8ddc5547a000863
+
+https: function loop_size(node) {
   let currentNode = null;
   let incr = 0;
   let result = 0;

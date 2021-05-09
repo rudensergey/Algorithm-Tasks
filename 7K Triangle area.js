@@ -1,0 +1,3 @@
+// https://www.codewars.com/kata/59bd84b8a0640e7c49002398
+
+const tArea = (tStr) => (tStr.match(/\n/g).length - 2) ** 2 / 2;
