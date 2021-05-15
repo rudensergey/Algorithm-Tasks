@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/5274d9d3ebc3030802000165
+
 var nbrOfLaps = function (x, y) {
   let result = 1;
 
