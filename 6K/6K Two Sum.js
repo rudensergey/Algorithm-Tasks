@@ -9,11 +9,27 @@
 // twoSum [1, 2, 3] 4 === (0, 2)
 
 function twoSum(numbers, target) {
-   let arr = [];
-   for (let i = 0; i < numbers.length; i++) {
-      for (let j = 0; j < numbers.length; j++) {
-         if (arr.length > 1) return arr;
-         if (i !== j && numbers[i] + numbers[j] === target) arr.push(i, j);
-      }
-   }
+  let arr = [];
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers.length; j++) {
+      if (arr.length > 1) return arr;
+      if (i !== j && numbers[i] + numbers[j] === target) arr.push(i, j);
+    }
+  }
+}
+
+// Refactoring
+
+function twoSum(numbers, target) {
+  const hashTable = {};
+
+  for (let i = 0; i < numbers.length; i++) {
+    const current = numbers[i],
+      diff = target - numbers[i];
+
+    if (hashTable[current] !== undefined) return [i, hashTable[current]];
+    else hashTable[diff] = i;
+  }
+
+  return -1;
 }
