@@ -1,7 +1,7 @@
 // https://www.codewars.com/kata/52ec24228a515e620b0005ef/solutions/javascript
 
 // Recourses
-// // https://www.coursera.org/lecture/enumerative-combinatorics/definition-and-first-examples-6UZTQ
+// https://www.coursera.org/lecture/enumerative-combinatorics/definition-and-first-examples-6UZTQ
 // https://www.mccme.ru/free-books/dubna/smirnov-asm.pdf
 // http://www-groups.mcs.st-andrews.ac.uk/~pjc/Teaching/MT5821/1/l8.pdf
 // https://www.youtube.com/watch?v=sng0OAl2Qzs&t=8s&ab_channel=Vanechki%3A%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%2C%D0%B1%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%D0%B8%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%B5%D0%B4%D1%80%D1%83%D0%B3%D0%BE%D0%B5
