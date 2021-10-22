@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/52ec24228a515e620b0005ef/solutions/javascript
 
-// Recourses
+// Resources
 // https://www.coursera.org/lecture/enumerative-combinatorics/definition-and-first-examples-6UZTQ
 // https://www.mccme.ru/free-books/dubna/smirnov-asm.pdf
 // http://www-groups.mcs.st-andrews.ac.uk/~pjc/Teaching/MT5821/1/l8.pdf
