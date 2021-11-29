@@ -189,4 +189,32 @@ function getIntersection(l1, l2) {
 const l1 = generateLL(7);
 const l2 = generateLL(4);
 
-traversial(getIntersection(l1, l2));
+// traversial(getIntersection(l1, l2));
+
+const l3 = generateLL(6);
+
+const reverseHalf = (head, n) => {
+  let a = head;
+  let b = null;
+  console.log(Math.floor(n / 2));
+  for (let i = 0; i < Math.floor(n / 2) - 1; i++) a = a.next;
+  b = a.next;
+
+  let x_p = a;
+  let x = b;
+
+  for (let i = 0; i < Math.floor(n / 2); i++) {
+    x_n = x.next;
+    x.next = x_p;
+    x_p = x;
+    x = x_n;
+  }
+
+  let c = x_p;
+  a.next = c;
+  b.next = null;
+};
+
+reverseHalf(l3, 6);
+
+traversial(l3);

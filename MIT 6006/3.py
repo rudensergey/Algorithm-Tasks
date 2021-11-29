@@ -96,7 +96,32 @@ def reverse_half(head, half_length):
   a.next = c
   b.next = None  
 
+def reverse_linked_list(head):
+  if head.next == None: return head
+  
+  a = head
+  length = 0
+
+  while a != None:
+    length = length + 1
+    a = a.next
+
+  a = head
+  b = a.next
+  
+  x_p = a
+  x = b
+
+  for _ in range(length - 1):
+    x_n = x.next
+    x.next = x_p
+    x_p = x
+    x = x_n
+
+  a.next = None
+  b.next = a
+  head = x_p
+
 print_linked_list(ll)
-reverse_half(ll, 5)
-print('>>')
+reverse_linked_list(ll)
 print_linked_list(ll)
