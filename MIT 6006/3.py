@@ -122,6 +122,26 @@ def reverse_linked_list(head):
   b.next = a
   head = x_p
 
-print_linked_list(ll)
-reverse_linked_list(ll)
-print_linked_list(ll)
+# print_linked_list(ll)
+# reverse_linked_list(ll)
+# print_linked_list(ll)
+
+def max_prefix(arr, i):
+  if i > 0:
+    j = max_prefix(arr, i - 1)
+    if arr[j] > arr[i]: return j
+    return i
+  else:
+    return i
+
+def selection_sort(arr, i):
+  if i > 0: 
+    max = max_prefix(arr, i - 1)
+    if arr[max] > arr[i]:
+      arr[i], arr[max] = arr[max], arr[i]
+    selection_sort(arr, i - 1)
+  return
+
+arr = [5,3,7,4,2,9]
+selection_sort(arr, 5)
+print(arr)
