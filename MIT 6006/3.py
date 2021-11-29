@@ -1,3 +1,5 @@
+import math
+
 cars = ['toyota', 'ford', 'audi']
 
 for i in cars:
@@ -143,5 +145,31 @@ def selection_sort(arr, i):
   return
 
 arr = [5,3,7,4,2,9]
-selection_sort(arr, 5)
-print(arr)
+# selection_sort(arr, 5)
+# print(arr)
+
+def merge_sort(arr, l, r):
+  if l < r:
+    m = len(arr) // 2
+    merge_sort(arr, l, m)
+    merge_sort(arr, m + 1, r)
+
+    i, j, k = r, m + 1, 0
+
+    result = []
+
+    while i > m + 1 & j > 0:
+      if (arr[i] > arr[j]): 
+        result[k] = arr[j]
+        j = j - 1
+      else: 
+        result[k] = arr[i]
+        i = i - 1
+      
+      k = k + 1
+
+    print(result)
+
+# print(arr)
+# print('>>>')
+# merge_sort(arr, 0, len(arr) - 1)
