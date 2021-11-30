@@ -16,4 +16,15 @@ def binary_search(arr, x):
   
   return -1
 
-print(binary_search(arr, 8))
+# print(binary_search(arr, 8))
+
+def bs_recursievly(arr, lo, hi, x):
+  if hi >= lo:
+    mid = (lo + hi) // 2
+    if arr[mid] == x: return mid
+    if arr[mid] < x: return bs_recursievly(arr, mid + 1, hi, x)
+    if arr[mid] > x: return bs_recursievly(arr, lo, mid - 1, x)
+  else: return -1
+  
+for i in arr:
+  print(bs_recursievly(arr, 0, len(arr), arr[i]))
