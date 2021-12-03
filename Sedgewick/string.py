@@ -18,7 +18,8 @@ def key_indexed_counting(arr):
     result[counts[ord(arr[i])] - 1] = arr[i]
     counts[ord(arr[i])] -= 1
     
-   
-  print(result)
+  for i in range(n):
+    arr[i] = result[i]
 
 key_indexed_counting(arr)
+print(arr)
