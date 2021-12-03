@@ -14,9 +14,6 @@ def insertion_sort(arr):
     for j in reversed(range(n)):
       if arr[i] > arr[j]: arr[i], arr[j] = arr[j], arr[i]
       else: break
-      
-
-
 print(arr)
 # selection_sort(arr)
 insertion_sort(arr)
