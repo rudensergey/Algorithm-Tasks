@@ -148,7 +148,7 @@ const sort = (arr) => {
       arr[largest] = arr[i];
       arr[i] = swap;
 
-      heapify(arr, n, largest);
+      heapify(arr, n , largest);
     }
   }
 };

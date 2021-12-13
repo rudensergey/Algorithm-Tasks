@@ -94,7 +94,9 @@ const benchmark = (times, func, ...rest) => {
   return (summarizedTime / times).toFixed(0);
 };
 
-console.log(search(text, ptrn));
-console.log(searchNaive(text, ptrn));
-console.log(`Average time for 1M times of execution naive: ${benchmark(10, searchNaive, text, ptrn)}ms`);
-console.log(`Average time for 1M times of execution site: ${benchmark(10, search, text, ptrn)}ms`);
+// console.log(search(text, ptrn));
+// console.log(searchNaive(text, ptrn));
+// console.log(`Average time for 1M times of execution naive: ${benchmark(10, searchNaive, text, ptrn)}ms`);
+// console.log(`Average time for 1M times of execution site: ${benchmark(10, search, text, ptrn)}ms`);
+
+console.log(search("hello", "ll"));
