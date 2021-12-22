@@ -1,6 +1,6 @@
 <br>https://leetcode.com/rudenjay/
 <br>https://www.codewars.com/users/rudensergey
-<br>https://bigfrontend.dev
+<br>https://bigfrontend.dev/user/jayruden
 
 <b>Courses</b>
 <br>Sedgevick Algorithms Part 1 - https://www.coursera.org/learn/algorithms-part1/home/welcome
