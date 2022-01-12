@@ -1,9 +1,9 @@
 # Algorithms #
 #### Here I present all the gathered information about algorithms which I've learned so far + activity ####
   
-Leetcode profile: https://leetcode.com/jayruden/ <br>
+Leetcode profile: https://leetcode.com/rudenjay/ <br>
 Codewars profile: https://www.codewars.com/users/rudensergey <br>
-Big Frontend profile: https://bigfrontend.dev/user/rudenjay <br>
+Big Frontend profile: https://bigfrontend.dev/user/jayruden <br>
 Codesignal profile: https://app.codesignal.com/profile/rudensergey <br>
 
 <b>Courses</b><br>
