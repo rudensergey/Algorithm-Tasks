@@ -11,7 +11,7 @@ Codesignal profile: https://app.codesignal.com/profile/rudensergey <br>
 [Sedgevick Algorithms Part 2 (15 hours)](https://www.coursera.org/learn/algorithms-part2/home/welcome)<br>
 [MIT 6.006 - Introduction to algorithms and data sctructures. Spring 2020 (37 hours)](https://www.youtube.com/watch?v=ZA-tUyM_y7s&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY)<br>
 [MIT 6.006 - Introduction to algorithms and data sctructures. Fall 2011 (50 hours)](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)<br>
-[MIT 6.0002 - Computational thinking and data science. Fall 2011 (50 hours)](https://www.youtube.com/playlist?list=PLUl4u3cNGP619EG1wp0kT-7rDE_Az5TNd)<br>
+[MIT 6.0002 - Computational thinking and data science. Fall 2016 (14 hours)](https://www.youtube.com/playlist?list=PLUl4u3cNGP619EG1wp0kT-7rDE_Az5TNd)<br>
 
 
 
